@@ -1,88 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shepherd UGC Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 2rem;
-      background: linear-gradient(to bottom right, #f5f7fa, #c3cfe2);
-      color: #333;
+      background: linear-gradient(to bottom right, #f9f9f9, #e2e8f0);
+      color: #2d3748;
     }
+
     h1 {
       text-align: center;
-      color: #2c3e50;
+      color: #1a202c;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
+
+    p.description {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+      font-size: 1.1rem;
+      color: #4a5568;
+    }
+
     h2 {
-      margin-top: 3rem;
-      border-bottom: 2px solid #2c3e50;
+      margin-top: 4rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid #cbd5e0;
       padding-bottom: 0.5rem;
-      color: #2c3e50;
+      font-size: 1.8rem;
+      color: #2c5282;
     }
+
     .project {
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
+      padding: 1rem;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     }
+
+    .project h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      color: #2d3748;
+    }
+
     iframe {
       width: 100%;
       height: 315px;
       border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border: none;
+    }
+
+    @media (max-width: 600px) {
+      iframe {
+        height: 250px;
+      }
     }
   </style>
 </head>
 <body>
+
   <h1>Shepherd UGC Portfolio</h1>
-  <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem;">
-    A curated selection of product-focused promotional videos created for various brands.
+  <p class="description">
+    A curated selection of promotional videos produced for various brands — focused on engaging, high-quality UGC content.
   </p>
 
   <!-- HEDWERX CATEGORY -->
   <h2>Hedwerx</h2>
   <div class="project">
     <h3>Hedwerx - Gym</h3>
-    <iframe src="https://www.youtube.com/embed/Qk4nJATfpYM" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/Qk4nJATfpYM" allowfullscreen></iframe>
   </div>
   <div class="project">
     <h3>Hedwerx - Trail Run</h3>
-    <iframe src="https://www.youtube.com/embed/oNY4SmP1eUc" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/oNY4SmP1eUc" allowfullscreen></iframe>
   </div>
   <div class="project">
     <h3>Hedwerx - Road Run</h3>
-    <iframe src="https://www.youtube.com/embed/p32moZgP9yc" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/p32moZgP9yc" allowfullscreen></iframe>
   </div>
   <div class="project">
     <h3>Hedwerx - Pickleball</h3>
-    <iframe src="https://www.youtube.com/embed/B3r5Ln0raKQ" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/B3r5Ln0raKQ" allowfullscreen></iframe>
   </div>
   <div class="project">
     <h3>Hedwerx - Trail Run 2</h3>
-    <iframe src="https://www.youtube.com/embed/ttWKLcMxRMQ" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/ttWKLcMxRMQ" allowfullscreen></iframe>
   </div>
   <div class="project">
     <h3>Hedwerx - Pregnancy Trail Run</h3>
-    <iframe src="https://www.youtube.com/embed/3IAosDNMcJc" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/3IAosDNMcJc" allowfullscreen></iframe>
   </div>
 
   <!-- ANDAR CATEGORY -->
   <h2>Andar</h2>
   <div class="project">
     <h3>Andar - Pilot Wallet</h3>
-    <iframe src="https://www.youtube.com/embed/BuPoMRIZrYc" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/BuPoMRIZrYc" allowfullscreen></iframe>
   </div>
 
   <!-- REDMOND CATEGORY -->
   <h2>Redmond</h2>
   <div class="project">
     <h3>Redmond Real Salt</h3>
-    <iframe src="https://www.youtube.com/embed/Eouco27Kv-c" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/Eouco27Kv-c" allowfullscreen></iframe>
   </div>
 
   <!-- WABOBA CATEGORY -->
   <h2>Waboba</h2>
   <div class="project">
     <h3>Waboba Original</h3>
-    <iframe width="315" height="560" src="https://www.youtube.com/embed/hm5aeTVpAwc" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/hm5aeTVpAwc" allowfullscreen></iframe>
   </div>
 
 </body>

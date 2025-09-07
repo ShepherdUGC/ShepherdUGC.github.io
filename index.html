@@ -15,6 +15,12 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Loading Shepherd UGC...</div>
+  </div>
+
   <!-- Navigation Header -->
   <nav class="nav">
     <div class="nav__container">
@@ -36,24 +42,25 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero">
+    <div class="hero__background-overlay"></div>
     <div class="hero__container">
       <div class="hero__content">
         <h1 class="hero__name">Katie Shepherd</h1>
-        <p class="hero__subtitle">Full-time UGC creator & paid ads specialist</p>
+        <p class="hero__subtitle">Creative storyteller & emerging UGC creator</p>
         
         <!-- Key Stats -->
         <div class="hero__stats">
           <div class="hero__stat">
-            <span class="hero__stat-emoji">📹</span>
-            <span class="hero__stat-text">500+ Videos Created</span>
+            <span class="hero__stat-emoji">✨</span>
+            <span class="hero__stat-text">Fresh Perspective</span>
           </div>
           <div class="hero__stat">
-            <span class="hero__stat-emoji">🎯</span>
-            <span class="hero__stat-text">95% Client Retention</span>
+            <span class="hero__stat-emoji">🎥</span>
+            <span class="hero__stat-text">Authentic Content</span>
           </div>
           <div class="hero__stat">
-            <span class="hero__stat-emoji">⚡</span>
-            <span class="hero__stat-text">48hr Turnaround</span>
+            <span class="hero__stat-emoji">💡</span>
+            <span class="hero__stat-text">Creative Ideas</span>
           </div>
         </div>
 
@@ -78,26 +85,40 @@
       <div class="hero__media">
         <div class="hero__video-grid">
           <div class="hero__video-card hero__video-card--featured">
-            <div class="hero__video-frame">
-              <iframe src="https://www.youtube.com/embed/Qk4nJATfpYM" allowfullscreen></iframe>
+            <div class="hero__video-frame" data-video-id="Qk4nJATfpYM" style="background-image: url('https://img.youtube.com/vi/Qk4nJATfpYM/maxresdefault.jpg');">
+              <div class="play-button">
+                <i class="fas fa-play"></i>
+              </div>
             </div>
             <p class="hero__video-title">Hedwerx - Gym</p>
           </div>
           
           <div class="hero__video-card">
-            <div class="hero__video-frame">
-              <iframe src="https://www.youtube.com/embed/oNY4SmP1eUc" allowfullscreen></iframe>
+            <div class="hero__video-frame" data-video-id="oNY4SmP1eUc" style="background-image: url('https://img.youtube.com/vi/oNY4SmP1eUc/maxresdefault.jpg');">
+              <div class="play-button">
+                <i class="fas fa-play"></i>
+              </div>
             </div>
             <p class="hero__video-title">Hedwerx - Trail Run</p>
           </div>
           
           <div class="hero__video-card">
-            <div class="hero__video-frame">
-              <iframe src="https://www.youtube.com/embed/BuPoMRIZrYc" allowfullscreen></iframe>
+            <div class="hero__video-frame" data-video-id="BuPoMRIZrYc" style="background-image: url('https://img.youtube.com/vi/BuPoMRIZrYc/maxresdefault.jpg');">
+              <div class="play-button">
+                <i class="fas fa-play"></i>
+              </div>
             </div>
             <p class="hero__video-title">Andar - Wallet</p>
           </div>
         </div>
+      </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="hero__scroll-indicator">
+      <div class="hero__scroll-text">Scroll to explore</div>
+      <div class="hero__scroll-arrow">
+        <i class="fas fa-chevron-down"></i>
       </div>
     </div>
   </section>
@@ -105,7 +126,7 @@
   <!-- About Section -->
   <section id="about" class="about">
     <div class="container">
-      <h2 class="section__title">Why Work With Me</h2>
+      <h2 class="section__title">Let's Create Something Amazing</h2>
       
       <div class="about__content">
         <div class="about__profile">
@@ -136,37 +157,30 @@
 
         <div class="about__info">
           <div class="about__copy">
-            <h3>Why UGC Works</h3>
-            <p><strong>92% of consumers trust recommendations from other people more than any other source.</strong> - Nielsen's Global Trust in Advertising report.</p>
-            <p><strong>UGC posts on social media have a 28% higher engagement rate than branded content.</strong> - socialmedia.org</p>
-            <p>That's the power of authentic user-generated content. When real people share genuine experiences with your products, it builds trust and engagement that traditional advertising simply can't match.</p>
+            <h3>Passion-Driven Content</h3>
+            <p>I believe every brand has a unique story to tell, and I'm here to help you tell it authentically. My fresh perspective and genuine enthusiasm for content creation means I approach each project with curiosity and creativity that resonates with real audiences.</p>
           </div>
           
           <div class="about__copy">
-            <h3>Experience That Delivers</h3>
-            <p>With over 3 years in the UGC space and 500+ successful campaigns, I understand what makes content convert. From authentic product reviews to engaging lifestyle content, I create videos that your audience will love and trust.</p>
+            <h3>Learning & Growing</h3>
+            <p>I'm dedicated to continuously improving my craft and staying current with the latest trends and techniques. This means you get content that feels fresh, relevant, and engaging while benefiting from competitive rates as I build my portfolio.</p>
           </div>
           
           <div class="about__copy">
-            <h3>Quality You Can Count On</h3>
-            <p>Professional lighting, crisp audio, and authentic storytelling come standard. I use high-end equipment and editing software to ensure every video meets brand standards while maintaining that authentic, relatable feel.</p>
-          </div>
-          
-          <div class="about__copy">
-            <h3>Professionalism First</h3>
-            <p>Fast turnarounds, clear communication, and unlimited revisions until you're 100% satisfied. I work with your brand guidelines and feedback to create content that perfectly represents your vision.</p>
+            <h3>Your Success Is My Priority</h3>
+            <p>I'm committed to delivering high-quality content that exceeds your expectations. With quick communication, attention to detail, and unlimited revisions, I'll work closely with you to create content that truly represents your brand's vision.</p>
           </div>
         </div>
       </div>
 
       <!-- Brand Logos Grid -->
       <div class="about__brands">
-        <h3 class="about__brands-title">Trusted by Amazing Brands</h3>
+        <h3 class="about__brands-title">Ready to Work With Brands Like</h3>
         <div class="about__brands-grid">
-          <div class="about__brand">Hedwerx</div>
-          <div class="about__brand">Andar</div>
-          <div class="about__brand">Redmond</div>
-          <div class="about__brand">Waboba</div>
+          <a href="https://www.hedwerx.com/" target="_blank" rel="noopener noreferrer" class="about__brand">Hedwerx</a>
+          <a href="https://www.andar.com/" target="_blank" rel="noopener noreferrer" class="about__brand">Andar</a>
+          <a href="https://redmond.life/" target="_blank" rel="noopener noreferrer" class="about__brand">Redmond</a>
+          <a href="https://waboba.com/" target="_blank" rel="noopener noreferrer" class="about__brand">Waboba</a>
         </div>
       </div>
     </div>
@@ -305,25 +319,25 @@
         <!-- Pricing Cards -->
         <div class="rates__pricing">
           <div class="pricing-card">
-            <h3 class="pricing-card__title">Basic Package</h3>
-            <div class="pricing-card__price">$150</div>
+            <h3 class="pricing-card__title">Starter Package</h3>
+            <div class="pricing-card__price">$75</div>
             <ul class="pricing-card__features">
               <li>1 UGC Video (30-60s)</li>
-              <li>Basic editing included</li>
-              <li>48hr turnaround</li>
-              <li>1 revision included</li>
+              <li>Professional editing</li>
+              <li>72hr turnaround</li>
+              <li>2 revisions included</li>
             </ul>
             <button class="pricing-card__cta">Get Started</button>
           </div>
           
           <div class="pricing-card pricing-card--featured">
             <div class="pricing-card__badge">Most Popular</div>
-            <h3 class="pricing-card__title">Standard Package</h3>
-            <div class="pricing-card__price">$250</div>
+            <h3 class="pricing-card__title">Growth Package</h3>
+            <div class="pricing-card__price">$125</div>
             <ul class="pricing-card__features">
               <li>2 UGC Videos (30-60s each)</li>
               <li>Professional editing</li>
-              <li>24hr turnaround</li>
+              <li>48hr turnaround</li>
               <li>3 revisions included</li>
               <li>Social media optimization</li>
             </ul>
@@ -331,15 +345,15 @@
           </div>
           
           <div class="pricing-card">
-            <h3 class="pricing-card__title">Premium Package</h3>
-            <div class="pricing-card__price">$400</div>
+            <h3 class="pricing-card__title">Brand Partner Package</h3>
+            <div class="pricing-card__price">$200</div>
             <ul class="pricing-card__features">
-              <li>4 UGC Videos (30-60s each)</li>
+              <li>3 UGC Videos (30-60s each)</li>
               <li>Premium editing + effects</li>
-              <li>24hr turnaround</li>
+              <li>48hr turnaround</li>
               <li>Unlimited revisions</li>
               <li>Multiple format exports</li>
-              <li>Strategy consultation</li>
+              <li>Content strategy discussion</li>
             </ul>
             <button class="pricing-card__cta">Get Started</button>
           </div>
@@ -420,6 +434,34 @@
 
   <!-- JavaScript for mobile navigation -->
   <script>
+    // Loading screen
+    window.addEventListener('load', () => {
+      const loadingScreen = document.getElementById('loading-screen');
+      setTimeout(() => {
+        loadingScreen.style.opacity = '0';
+        setTimeout(() => {
+          loadingScreen.style.display = 'none';
+        }, 500);
+      }, 1000);
+    });
+
+    // Video thumbnail click to load iframe
+    document.querySelectorAll('.hero__video-frame[data-video-id]').forEach(frame => {
+      frame.addEventListener('click', function() {
+        const videoId = this.getAttribute('data-video-id');
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.border = 'none';
+        
+        // Replace thumbnail with iframe
+        this.innerHTML = '';
+        this.appendChild(iframe);
+      });
+    });
+
     // Mobile navigation toggle
     const navToggle = document.querySelector('.nav__toggle');
     const navMenu = document.querySelector('.nav__menu');
@@ -428,6 +470,17 @@
       navMenu.classList.toggle('nav__menu--active');
       navToggle.classList.toggle('nav__toggle--active');
     });
+    
+    // Scroll indicator click handler
+    const scrollIndicator = document.querySelector('.hero__scroll-indicator');
+    if (scrollIndicator) {
+      scrollIndicator.addEventListener('click', () => {
+        document.querySelector('#about').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    }
     
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -6,37 +6,66 @@
   <title>Shepherd UGC</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Quicksand:wght@600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #e0a800;
+      --text-dark: #2d3748;
+      --text-subtle: #4a5568;
+      --bg-light: #fffbea;
+      --card-bg: #ffffff;
+      --shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 3rem;
-      background-color: #fffbea;
+      padding: 3rem 1rem;
+      background-color: var(--bg-light);
       background-image: url('https://www.transparenttextures.com/patterns/squiggle.png');
       background-repeat: repeat;
       background-size: 300px;
-      color: #2d3748;
+      color: var(--text-dark);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
     h1 {
       text-align: center;
-      font-size: 3rem;
-      margin-bottom: 1rem;
+      font-size: 3.2rem;
+      margin-bottom: 0.5rem;
       font-family: 'Quicksand', sans-serif;
-      color: #e0a800;
-      letter-spacing: 0.5px;
+      color: var(--primary);
+      position: relative;
+    }
+
+    h1::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background-color: var(--primary);
+      margin: 0.5rem auto 1rem;
+      border-radius: 3px;
     }
 
     p.description {
       text-align: center;
-      max-width: 600px;
-      margin: 0 auto 4rem;
-      font-size: 1.1rem;
-      color: #4a5568;
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      font-size: 1.15rem;
+      color: var(--text-subtle);
+      line-height: 1.6;
     }
 
     h2 {
       margin-top: 4rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       border-bottom: 2px solid #cbd5e0;
       padding-bottom: 0.5rem;
       font-size: 1.8rem;
@@ -45,25 +74,27 @@
 
     .video-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
     }
 
     .project {
-      background-color: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
       padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
     }
 
     .project h3 {
       margin-bottom: 0.5rem;
       font-size: 1.1rem;
-      color: #2d3748;
+      color: var(--text-dark);
       text-align: center;
     }
 
@@ -74,86 +105,79 @@
       border: none;
     }
 
-    @media (max-width: 900px) {
-      .video-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
     @media (max-width: 600px) {
-      .video-grid {
-        grid-template-columns: 1fr;
-      }
-
       iframe {
         height: 250px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
       }
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <h1>Shepherd UGC</h1>
+    <p class="description">
+      A curated selection of promotional videos produced for various brands — focused on engaging, high-quality UGC content that converts.
+    </p>
 
-  <h1>Shepherd UGC</h1>
-  <p class="description">
-    A curated selection of promotional videos produced for various brands — focused on engaging, high-quality UGC content.
-  </p>
+    <!-- HEDWERX -->
+    <h2>Hedwerx</h2>
+    <div class="video-grid">
+      <div class="project">
+        <h3>Hedwerx - Gym</h3>
+        <iframe src="https://www.youtube.com/embed/Qk4nJATfpYM" allowfullscreen></iframe>
+      </div>
+      <div class="project">
+        <h3>Hedwerx - Trail Run</h3>
+        <iframe src="https://www.youtube.com/embed/oNY4SmP1eUc" allowfullscreen></iframe>
+      </div>
+      <div class="project">
+        <h3>Hedwerx - Road Run</h3>
+        <iframe src="https://www.youtube.com/embed/p32moZgP9yc" allowfullscreen></iframe>
+      </div>
+      <div class="project">
+        <h3>Hedwerx - Pickleball</h3>
+        <iframe src="https://www.youtube.com/embed/B3r5Ln0raKQ" allowfullscreen></iframe>
+      </div>
+      <div class="project">
+        <h3>Hedwerx - Trail Run 2</h3>
+        <iframe src="https://www.youtube.com/embed/ttWKLcMxRMQ" allowfullscreen></iframe>
+      </div>
+      <div class="project">
+        <h3>Hedwerx - Pregnancy Trail Run</h3>
+        <iframe src="https://www.youtube.com/embed/3IAosDNMcJc" allowfullscreen></iframe>
+      </div>
+    </div>
 
-  <!-- HEDWERX -->
-  <h2>Hedwerx</h2>
-  <div class="video-grid">
-    <div class="project">
-      <h3>Hedwerx - Gym</h3>
-      <iframe src="https://www.youtube.com/embed/Qk4nJATfpYM" allowfullscreen></iframe>
+    <!-- ANDAR -->
+    <h2>Andar</h2>
+    <div class="video-grid">
+      <div class="project">
+        <h3>Andar - Pilot Wallet</h3>
+        <iframe src="https://www.youtube.com/embed/BuPoMRIZrYc" allowfullscreen></iframe>
+      </div>
     </div>
-    <div class="project">
-      <h3>Hedwerx - Trail Run</h3>
-      <iframe src="https://www.youtube.com/embed/oNY4SmP1eUc" allowfullscreen></iframe>
+
+    <!-- REDMOND -->
+    <h2>Redmond</h2>
+    <div class="video-grid">
+      <div class="project">
+        <h3>Redmond Real Salt</h3>
+        <iframe src="https://www.youtube.com/embed/Eouco27Kv-c" allowfullscreen></iframe>
+      </div>
     </div>
-    <div class="project">
-      <h3>Hedwerx - Road Run</h3>
-      <iframe src="https://www.youtube.com/embed/p32moZgP9yc" allowfullscreen></iframe>
-    </div>
-    <div class="project">
-      <h3>Hedwerx - Pickleball</h3>
-      <iframe src="https://www.youtube.com/embed/B3r5Ln0raKQ" allowfullscreen></iframe>
-    </div>
-    <div class="project">
-      <h3>Hedwerx - Trail Run 2</h3>
-      <iframe src="https://www.youtube.com/embed/ttWKLcMxRMQ" allowfullscreen></iframe>
-    </div>
-    <div class="project">
-      <h3>Hedwerx - Pregnancy Trail Run</h3>
-      <iframe src="https://www.youtube.com/embed/3IAosDNMcJc" allowfullscreen></iframe>
+
+    <!-- WABOBA -->
+    <h2>Waboba</h2>
+    <div class="video-grid">
+      <div class="project">
+        <h3>Waboba Original</h3>
+        <iframe src="https://www.youtube.com/embed/hm5aeTVpAwc" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
-
-  <!-- ANDAR -->
-  <h2>Andar</h2>
-  <div class="video-grid">
-    <div class="project">
-      <h3>Andar - Pilot Wallet</h3>
-      <iframe src="https://www.youtube.com/embed/BuPoMRIZrYc" allowfullscreen></iframe>
-    </div>
-  </div>
-
-  <!-- REDMOND -->
-  <h2>Redmond</h2>
-  <div class="video-grid">
-    <div class="project">
-      <h3>Redmond Real Salt</h3>
-      <iframe src="https://www.youtube.com/embed/Eouco27Kv-c" allowfullscreen></iframe>
-    </div>
-  </div>
-
-  <!-- WABOBA -->
-  <h2>Waboba</h2>
-  <div class="video-grid">
-    <div class="project">
-      <h3>Waboba Original</h3>
-      <iframe src="https://www.youtube.com/embed/hm5aeTVpAwc" allowfullscreen></iframe>
-    </div>
-  </div>
-
 </body>
 </html>
-

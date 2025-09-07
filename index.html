@@ -7,13 +7,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Quicksand:wght@600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #e0a800; /* adjust once we pull colors from your actual logo */
+      --primary: #3a5f9e; /* light navy */
       --background: #fdfcf9;
-      --text-main: #2d2d2d;
+      --text-main: #1a1a1a;
       --text-subtle: #555;
       --border: #e2e8f0;
       --card-bg: #ffffff;
-      --shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      --shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     }
 
     body {
@@ -33,35 +33,45 @@
     /* HERO SECTION */
     header {
       text-align: center;
-      padding: 4rem 2rem 3rem;
-      background: linear-gradient(135deg, var(--primary), #f6e27a);
+      padding: 4rem 2rem 2rem;
+      background: linear-gradient(135deg, var(--primary), #5b7dc9);
     }
 
-    header img {
-      width: 120px;
-      height: 120px;
+    header .logo-wrapper {
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 1rem;
       box-shadow: var(--shadow);
-      margin-bottom: 1rem;
+    }
+
+    header .logo-wrapper img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
     }
 
     header h1 {
       font-family: 'Quicksand', sans-serif;
       font-size: 2.8rem;
-      margin: 0.5rem 0;
+      margin: 0.25rem 0 0.5rem;
       color: #fff;
     }
 
     header p {
       max-width: 700px;
-      margin: 0 auto;
+      margin: 0 auto 0;
       font-size: 1.2rem;
       color: rgba(255, 255, 255, 0.9);
     }
 
     /* SECTIONS */
     h2 {
-      font-size: 1.8rem;
+      font-size: 2rem;
       margin: 3rem 0 1.5rem;
       color: var(--primary);
       text-align: left;
@@ -71,13 +81,13 @@
 
     .video-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
     }
 
     .project {
       background-color: var(--card-bg);
-      border-radius: 14px;
+      border-radius: 16px;
       padding: 1rem;
       box-shadow: var(--shadow);
       display: flex;
@@ -88,7 +98,7 @@
 
     .project:hover {
       transform: translateY(-6px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
     }
 
     .project h3 {
@@ -102,7 +112,7 @@
       width: 100%;
       height: 200px;
       border: none;
-      border-radius: 10px;
+      border-radius: 12px;
     }
 
     footer {
@@ -112,12 +122,34 @@
       font-size: 0.9rem;
       color: var(--text-subtle);
     }
+
+    @media (max-width: 1024px) {
+      .video-grid {
+        grid-template-columns: repeat(3, 1fr); /* maintain 3 columns */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .video-grid {
+        grid-template-columns: repeat(3, 1fr); /* still 3 per row */
+      }
+      iframe { height: 180px; }
+    }
+
+    @media (max-width: 600px) {
+      .video-grid {
+        grid-template-columns: 1fr; /* stack for mobile */
+      }
+      iframe { height: 150px; }
+      header h1 { font-size: 2rem; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <!-- Replace "shepherdugc-logo.png" with your actual logo file or hosted URL -->
-    <img src="shepherdugc-logo.png.png" alt="Shepherd UGC Logo" />
+    <div class="logo-wrapper">
+      <img src="shepherdugc-logo.png" alt="Shepherd UGC Logo" />
+    </div>
     <h1>Shepherd UGC</h1>
     <p>High-quality, engaging UGC content crafted to help brands connect authentically with their audiences.</p>
   </header>

@@ -231,7 +231,7 @@ HERO SECTION
 */
 .hero {
   padding: calc(100px + var(--spacing-xxl)) var(--spacing-lg) calc(var(--spacing-xxl) + 4rem);
-  background-image: url('background.jpg');
+  background-image: url('background.JPG');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -265,6 +265,8 @@ HERO SECTION
 
 .hero__content {
   animation: fadeInUp 1s ease-out;
+  text-align: center;
+  padding-left: var(--spacing-xl);
 }
 
 .hero__name {
@@ -274,6 +276,7 @@ HERO SECTION
   color: var(--color-primary);
   line-height: 1.2;
   margin-bottom: var(--spacing-sm);
+  white-space: nowrap;
 }
 
 .hero__subtitle {

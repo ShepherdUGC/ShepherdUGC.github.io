@@ -232,7 +232,7 @@ HERO SECTION
 */
 .hero {
   padding: calc(80px + var(--spacing-xxl)) var(--spacing-lg) var(--spacing-xxl);
-  background-image: url('./background.jpg');
+  background-image: url('background.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

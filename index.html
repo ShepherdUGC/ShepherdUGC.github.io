@@ -1,193 +1,463 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shepherd UGC</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Quicksand:wght@600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #3a5f9e; /* light navy */
-      --background: #fdfcf9;
-      --text-main: #1a1a1a;
-      --text-subtle: #555;
-      --border: #e2e8f0;
-      --card-bg: #ffffff;
-      --shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background-color: var(--background);
-      color: var(--text-main);
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-
-    /* HERO SECTION */
-    header {
-      text-align: center;
-      padding: 4rem 2rem 2rem;
-      background: linear-gradient(135deg, var(--primary), #5b7dc9);
-    }
-
-    header .logo-wrapper {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      background-color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto 1rem;
-      box-shadow: var(--shadow);
-    }
-
-    header .logo-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%; /* This ensures the image itself is a circle */
-    }
-
-    header h1 {
-      font-family: 'Quicksand', sans-serif;
-      font-size: 2.8rem;
-      margin: 0.25rem 0 0.5rem;
-      color: #fff;
-    }
-
-    header p {
-      max-width: 700px;
-      margin: 0 auto 0;
-      font-size: 1.2rem;
-      color: rgba(255, 255, 255, 0.9);
-    }
-
-    /* SECTIONS */
-    h2 {
-      font-size: 2rem;
-      margin: 3rem 0 1.5rem;
-      color: var(--primary);
-      text-align: left;
-      border-bottom: 2px solid var(--border);
-      padding-bottom: 0.5rem;
-    }
-
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-    }
-
-    .project {
-      background-color: var(--card-bg);
-      border-radius: 16px;
-      padding: 1rem;
-      box-shadow: var(--shadow);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .project:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-    }
-
-    .project h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.75rem;
-      text-align: center;
-      color: var(--text-main);
-    }
-
-    iframe {
-      width: 100%;
-      height: 200px;
-      border: none;
-      border-radius: 12px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: var(--text-subtle);
-    }
-
-    @media (max-width: 1024px) {
-      .video-grid {
-        grid-template-columns: repeat(3, 1fr); /* maintain 3 columns */
-      }
-    }
-
-    @media (max-width: 768px) {
-      .video-grid {
-        grid-template-columns: repeat(3, 1fr); /* still 3 per row */
-      }
-      iframe { height: 180px; }
-    }
-
-    @media (max-width: 600px) {
-      .video-grid {
-        grid-template-columns: 1fr; /* stack for mobile */
-      }
-      iframe { height: 150px; }
-      header h1 { font-size: 2rem; }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shepherd UGC - Full-time UGC Creator & Paid Ads Specialist</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="logo-wrapper">
-      <img src="shepherd-logo2.png" alt="Shepherd UGC Logo" />
+  <!-- Navigation Header -->
+  <nav class="nav">
+    <div class="nav__container">
+      <div class="nav__logo">
+        <img src="shepherd-logo2.png" alt="Shepherd UGC Logo" class="nav__logo-img">
+        <span class="nav__logo-text">Shepherd UGC</span>
+      </div>
+      <ul class="nav__menu">
+        <li class="nav__item"><a href="#home" class="nav__link nav__link--active">Home</a></li>
+        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+        <li class="nav__item"><a href="#rates" class="nav__link">Rates & Contact</a></li>
+      </ul>
+      <div class="nav__toggle">
+        <i class="fas fa-bars"></i>
+      </div>
     </div>
-    <h1>Shepherd UGC</h1>
-    <p>High-quality, engaging UGC content crafted to help brands connect authentically with their audiences.</p>
-  </header>
+  </nav>
 
-  <div class="container">
-    <!-- HEDWERX -->
-    <h2>Hedwerx</h2>
-    <div class="video-grid">
-      <div class="project"><h3>Hedwerx - Gym</h3><iframe src="https://www.youtube.com/embed/Qk4nJATfpYM" allowfullscreen></iframe></div>
-      <div class="project"><h3>Hedwerx - Trail Run</h3><iframe src="https://www.youtube.com/embed/oNY4SmP1eUc" allowfullscreen></iframe></div>
-      <div class="project"><h3>Hedwerx - Road Run</h3><iframe src="https://www.youtube.com/embed/p32moZgP9yc" allowfullscreen></iframe></div>
-      <div class="project"><h3>Hedwerx - Pickleball</h3><iframe src="https://www.youtube.com/embed/B3r5Ln0raKQ" allowfullscreen></iframe></div>
-      <div class="project"><h3>Hedwerx - Trail Run 2</h3><iframe src="https://www.youtube.com/embed/ttWKLcMxRMQ" allowfullscreen></iframe></div>
-      <div class="project"><h3>Hedwerx - Pregnancy Trail Run</h3><iframe src="https://www.youtube.com/embed/3IAosDNMcJc" allowfullscreen></iframe></div>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero__container">
+      <div class="hero__content">
+        <h1 class="hero__name">Katie Shepherd</h1>
+        <p class="hero__subtitle">Full-time UGC creator & paid ads specialist</p>
+        
+        <!-- Key Stats -->
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <span class="hero__stat-emoji">📹</span>
+            <span class="hero__stat-text">500+ Videos Created</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-emoji">🎯</span>
+            <span class="hero__stat-text">95% Client Retention</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-emoji">⚡</span>
+            <span class="hero__stat-text">48hr Turnaround</span>
+          </div>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="hero__social">
+          <a href="#" class="hero__social-link" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="hero__social-link" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+          <a href="#" class="hero__social-link" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="#" class="hero__social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Media -->
+      <div class="hero__media">
+        <div class="hero__video-grid">
+          <div class="hero__video-card hero__video-card--featured">
+            <div class="hero__video-frame">
+              <iframe src="https://www.youtube.com/embed/Qk4nJATfpYM" allowfullscreen></iframe>
+            </div>
+            <p class="hero__video-title">Hedwerx - Gym</p>
+          </div>
+          
+          <div class="hero__video-card">
+            <div class="hero__video-frame">
+              <iframe src="https://www.youtube.com/embed/oNY4SmP1eUc" allowfullscreen></iframe>
+            </div>
+            <p class="hero__video-title">Hedwerx - Trail Run</p>
+          </div>
+          
+          <div class="hero__video-card">
+            <div class="hero__video-frame">
+              <iframe src="https://www.youtube.com/embed/BuPoMRIZrYc" allowfullscreen></iframe>
+            </div>
+            <p class="hero__video-title">Andar - Wallet</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- ANDAR -->
-    <h2>Andar</h2>
-    <div class="video-grid">
-      <div class="project"><h3>Andar - Pilot Wallet</h3><iframe src="https://www.youtube.com/embed/BuPoMRIZrYc" allowfullscreen></iframe></div>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section__title">Why Work With Me</h2>
+      
+      <div class="about__content">
+        <div class="about__profile">
+          <div class="about__headshot">
+            <img src="shepherd-logo2.png" alt="Katie Shepherd" class="about__headshot-img">
+          </div>
+          
+          <!-- Fun Fact Icons -->
+          <div class="about__facts">
+            <div class="about__fact">
+              <i class="fas fa-coffee"></i>
+              <span>Coffee Addict</span>
+            </div>
+            <div class="about__fact">
+              <i class="fas fa-dog"></i>
+              <span>Dog Mom</span>
+            </div>
+            <div class="about__fact">
+              <i class="fas fa-camera"></i>
+              <span>Content Creator</span>
+            </div>
+            <div class="about__fact">
+              <i class="fas fa-heart"></i>
+              <span>Brand Storyteller</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__info">
+          <div class="about__copy">
+            <h3>Why UGC Works</h3>
+            <p><strong>92% of consumers trust recommendations from other people more than any other source.</strong> - Nielsen's Global Trust in Advertising report.</p>
+            <p>That's the power of authentic user-generated content. When real people share genuine experiences with your products, it builds trust that traditional advertising simply can't match.</p>
+          </div>
+          
+          <div class="about__copy">
+            <h3>Experience That Delivers</h3>
+            <p>With over 3 years in the UGC space and 500+ successful campaigns, I understand what makes content convert. From authentic product reviews to engaging lifestyle content, I create videos that your audience will love and trust.</p>
+          </div>
+          
+          <div class="about__copy">
+            <h3>Quality You Can Count On</h3>
+            <p>Professional lighting, crisp audio, and authentic storytelling come standard. I use high-end equipment and editing software to ensure every video meets brand standards while maintaining that authentic, relatable feel.</p>
+          </div>
+          
+          <div class="about__copy">
+            <h3>Professionalism First</h3>
+            <p>Fast turnarounds, clear communication, and unlimited revisions until you're 100% satisfied. I work with your brand guidelines and feedback to create content that perfectly represents your vision.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brand Logos Grid -->
+      <div class="about__brands">
+        <h3 class="about__brands-title">Trusted by Amazing Brands</h3>
+        <div class="about__brands-grid">
+          <div class="about__brand">Hedwerx</div>
+          <div class="about__brand">Andar</div>
+          <div class="about__brand">Redmond</div>
+          <div class="about__brand">Waboba</div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- REDMOND -->
-    <h2>Redmond</h2>
-    <div class="video-grid">
-      <div class="project"><h3>Redmond Real Salt</h3><iframe src="https://www.youtube.com/embed/Eouco27Kv-c" allowfullscreen></iframe></div>
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2 class="section__title">Portfolio</h2>
+      
+      <!-- Most Recent -->
+      <div class="portfolio__section">
+        <h3 class="portfolio__section-title">
+          <span class="portfolio__section-text">Most Recent</span>
+          <span class="portfolio__section-divider">✨</span>
+        </h3>
+        <div class="portfolio__grid">
+          <div class="portfolio__item">
+            <div class="portfolio__video">
+              <iframe src="https://www.youtube.com/embed/Qk4nJATfpYM" allowfullscreen></iframe>
+              <div class="portfolio__play-overlay">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <h4 class="portfolio__title">Hedwerx - Gym Workout</h4>
+          </div>
+          
+          <div class="portfolio__item">
+            <div class="portfolio__video">
+              <iframe src="https://www.youtube.com/embed/oNY4SmP1eUc" allowfullscreen></iframe>
+              <div class="portfolio__play-overlay">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <h4 class="portfolio__title">Hedwerx - Trail Running</h4>
+          </div>
+          
+          <div class="portfolio__item">
+            <div class="portfolio__video">
+              <iframe src="https://www.youtube.com/embed/p32moZgP9yc" allowfullscreen></iframe>
+              <div class="portfolio__play-overlay">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <h4 class="portfolio__title">Hedwerx - Road Running</h4>
+          </div>
+          
+          <div class="portfolio__item">
+            <div class="portfolio__video">
+              <iframe src="https://www.youtube.com/embed/B3r5Ln0raKQ" allowfullscreen></iframe>
+              <div class="portfolio__play-overlay">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <h4 class="portfolio__title">Hedwerx - Pickleball</h4>
+          </div>
+          
+          <div class="portfolio__item">
+            <div class="portfolio__video">
+              <iframe src="https://www.youtube.com/embed/ttWKLcMxRMQ" allowfullscreen></iframe>
+              <div class="portfolio__play-overlay">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <h4 class="portfolio__title">Hedwerx - Trail Run 2</h4>
+          </div>
+          
+          <div class="portfolio__item">
+            <div class="portfolio__video">
+              <iframe src="https://www.youtube.com/embed/3IAosDNMcJc" allowfullscreen></iframe>
+              <div class="portfolio__play-overlay">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <h4 class="portfolio__title">Hedwerx - Pregnancy Trail Run</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fashion & Beauty -->
+      <div class="portfolio__section">
+        <h3 class="portfolio__section-title">
+          <span class="portfolio__section-text">Fashion & Beauty</span>
+          <span class="portfolio__section-divider">💄</span>
+        </h3>
+        <div class="portfolio__grid">
+          <div class="portfolio__item">
+            <div class="portfolio__video">
+              <iframe src="https://www.youtube.com/embed/BuPoMRIZrYc" allowfullscreen></iframe>
+              <div class="portfolio__play-overlay">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <h4 class="portfolio__title">Andar - Pilot Wallet</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Health & Wellness -->
+      <div class="portfolio__section">
+        <h3 class="portfolio__section-title">
+          <span class="portfolio__section-text">Health & Wellness</span>
+          <span class="portfolio__section-divider">🌿</span>
+        </h3>
+        <div class="portfolio__grid">
+          <div class="portfolio__item">
+            <div class="portfolio__video">
+              <iframe src="https://www.youtube.com/embed/Eouco27Kv-c" allowfullscreen></iframe>
+              <div class="portfolio__play-overlay">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <h4 class="portfolio__title">Redmond Real Salt</h4>
+          </div>
+          
+          <div class="portfolio__item">
+            <div class="portfolio__video">
+              <iframe src="https://www.youtube.com/embed/hm5aeTVpAwc" allowfullscreen></iframe>
+              <div class="portfolio__play-overlay">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <h4 class="portfolio__title">Waboba Original</h4>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- WABOBA -->
-    <h2>Waboba</h2>
-    <div class="video-grid">
-      <div class="project"><h3>Waboba Original</h3><iframe src="https://www.youtube.com/embed/hm5aeTVpAwc" allowfullscreen></iframe></div>
+  <!-- Rates & Contact Section -->
+  <section id="rates" class="rates">
+    <div class="container">
+      <h2 class="section__title">Rates & Contact</h2>
+      
+      <div class="rates__content">
+        <!-- Pricing Cards -->
+        <div class="rates__pricing">
+          <div class="pricing-card">
+            <h3 class="pricing-card__title">Basic Package</h3>
+            <div class="pricing-card__price">$150</div>
+            <ul class="pricing-card__features">
+              <li>1 UGC Video (30-60s)</li>
+              <li>Basic editing included</li>
+              <li>48hr turnaround</li>
+              <li>1 revision included</li>
+            </ul>
+            <button class="pricing-card__cta">Get Started</button>
+          </div>
+          
+          <div class="pricing-card pricing-card--featured">
+            <div class="pricing-card__badge">Most Popular</div>
+            <h3 class="pricing-card__title">Standard Package</h3>
+            <div class="pricing-card__price">$250</div>
+            <ul class="pricing-card__features">
+              <li>2 UGC Videos (30-60s each)</li>
+              <li>Professional editing</li>
+              <li>24hr turnaround</li>
+              <li>3 revisions included</li>
+              <li>Social media optimization</li>
+            </ul>
+            <button class="pricing-card__cta">Get Started</button>
+          </div>
+          
+          <div class="pricing-card">
+            <h3 class="pricing-card__title">Premium Package</h3>
+            <div class="pricing-card__price">$400</div>
+            <ul class="pricing-card__features">
+              <li>4 UGC Videos (30-60s each)</li>
+              <li>Premium editing + effects</li>
+              <li>24hr turnaround</li>
+              <li>Unlimited revisions</li>
+              <li>Multiple format exports</li>
+              <li>Strategy consultation</li>
+            </ul>
+            <button class="pricing-card__cta">Get Started</button>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="rates__contact">
+          <h3 class="rates__contact-title">Ready to Work Together?</h3>
+          <form class="contact-form">
+            <div class="contact-form__group">
+              <label for="name" class="contact-form__label">Name</label>
+              <input type="text" id="name" name="name" class="contact-form__input" required>
+            </div>
+            
+            <div class="contact-form__group">
+              <label for="email" class="contact-form__label">Email</label>
+              <input type="email" id="email" name="email" class="contact-form__input" required>
+            </div>
+            
+            <div class="contact-form__group">
+              <label for="message" class="contact-form__label">Project Details</label>
+              <textarea id="message" name="message" class="contact-form__textarea" rows="6" placeholder="Tell me about your project, timeline, and any specific requirements..." required></textarea>
+            </div>
+            
+            <button type="submit" class="contact-form__submit">Send Message</button>
+          </form>
+          
+          <!-- Social Links -->
+          <div class="rates__social">
+            <p>Or reach out directly:</p>
+            <div class="rates__social-links">
+              <a href="mailto:hello@shepherdugc.com" class="rates__social-link">
+                <i class="fas fa-envelope"></i>
+                hello@shepherdugc.com
+              </a>
+              <a href="#" class="rates__social-link">
+                <i class="fab fa-instagram"></i>
+                @shepherdugc
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <footer>
-    © 2025 Shepherd UGC. All rights reserved.
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <img src="shepherd-logo2.png" alt="Shepherd UGC Logo" class="footer__logo">
+          <span class="footer__brand-text">Shepherd UGC</span>
+        </div>
+        <p class="footer__text">© 2025 Shepherd UGC. All rights reserved.</p>
+        <div class="footer__social">
+          <a href="#" class="footer__social-link" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <!-- JavaScript for mobile navigation -->
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.querySelector('.nav__toggle');
+    const navMenu = document.querySelector('.nav__menu');
+    
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('nav__menu--active');
+      navToggle.classList.toggle('nav__toggle--active');
+    });
+    
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          // Close mobile menu if open
+          navMenu.classList.remove('nav__menu--active');
+          navToggle.classList.remove('nav__toggle--active');
+        }
+      });
+    });
+    
+    // Update active navigation link on scroll
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav__link');
+      
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= (sectionTop - 200)) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('nav__link--active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('nav__link--active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
